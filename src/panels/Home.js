@@ -8,38 +8,11 @@ import PropTypes from 'prop-types';
 import { Lenta } from '../mainPanels/Lenta';
 import { PeopleQuestionary } from '../mainPanels/PeopleQuestionary';
 import { AnimalQuestionary } from '../mainPanels/AnimalQuestionary';
+import { TabbarForLapa } from '../props/TabbarForLapa.js';
 
 
 
 export const Home = () => {
-  const [showDates, setShowDates] = useState(true);
-  const toggleDates = (value) => {
-    setShowDates(value);
-  };
-  const [goalMeeting, setGoalMeeting] = React.useState([
-    {
-      value: 'friendship',
-      label: 'Дружба',
-    },
-    {
-      value: 'walk',
-      label: 'Прогулки',
-    },
-    {
-      value: 'relationship',
-      label: 'Отношения',
-    },
-  ]);
-  const onChange = (event) => {
-    setGoalMeeting(event);
-  };
-  const ClearButton = ({ onClick, ...restProps }) => {
-    return (
-      <IconButton hoverMode="opacity" label="Очистить поле" onClick={onClick} {...restProps}>
-        <Icon16Clear />
-      </IconButton>
-    );
-  };
 
   const [activePanel, setActivePanel] = useState('peopleQuestionary');
 
@@ -63,16 +36,7 @@ export const Home = () => {
       <Panel id="Lenta">
         <PanelHeader>Лента</PanelHeader>
         <Lenta />
-        <Div style={{ textAlign: 'center' }}>
-          <ButtonGroup mode="vertical" gap="m" align='center' style={{ minWidth: 328 }}>
-            <Button onClick={() => { setActivePanel('peopleQuestionary') }} size="l" appearance="positive" stretched>
-              Подтвердить
-            </Button>
-            <Button onClick={() => { setActivePanel('peopleQuestionary') }} size="l" appearance="accent" stretched>
-              Перейти далее без заполнения анкеты
-            </Button>
-          </ButtonGroup>
-        </Div>
+        <TabbarForLapa />
       </Panel>
 
       <Panel id='animalQuestionary'>
