@@ -8,8 +8,8 @@ import PropTypes from 'prop-types';
 import { Lenta } from '../mainPanels/Lenta';
 import { PeopleQuestionary } from '../mainPanels/PeopleQuestionary';
 import { AnimalQuestionary } from '../mainPanels/AnimalQuestionary';
-import { TabbarForLapa } from '../props/TabbarForLapa.js';
-
+import { TabBarForLapa } from '../props/TabbarForLapa';
+import { Likes } from '../mainPanels/Likes';
 
 
 export const Home = () => {
@@ -33,12 +33,6 @@ export const Home = () => {
         </Div>
       </Panel>
 
-      <Panel id="Lenta">
-        <PanelHeader>Лента</PanelHeader>
-        <Lenta />
-        <TabbarForLapa />
-      </Panel>
-
       <Panel id='animalQuestionary'>
         <PanelHeader>Анкета питомца</PanelHeader>
         <AnimalQuestionary />
@@ -53,6 +47,37 @@ export const Home = () => {
           </ButtonGroup>
         </Div>
       </Panel>
+
+      <Panel id="Lenta">
+        <PanelHeader>Лента</PanelHeader>
+        <Lenta />
+        <TabBarForLapa activePanel={activePanel} setActivePanel={setActivePanel} />
+      </Panel>
+
+      <Panel id='likes'>
+        <PanelHeader>Симпатии</PanelHeader>
+        <Likes />
+        <TabBarForLapa activePanel={activePanel} setActivePanel={setActivePanel} />
+      </Panel>
+
+      <Panel id='filters'>
+        <PanelHeader>Фильтры</PanelHeader>
+
+        <TabBarForLapa activePanel={activePanel} setActivePanel={setActivePanel} />
+      </Panel>
+
+      <Panel id='favorites'>
+        <PanelHeader>Избранное</PanelHeader>
+
+        <TabBarForLapa activePanel={activePanel} setActivePanel={setActivePanel} />
+      </Panel>
+
+      <Panel id='profile'>
+        <PanelHeader>Профиль</PanelHeader>
+
+        <TabBarForLapa activePanel={activePanel} setActivePanel={setActivePanel} />
+      </Panel>
+
     </View>
   );
 };

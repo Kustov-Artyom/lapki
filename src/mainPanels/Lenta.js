@@ -3,13 +3,10 @@ import {
   Panel, PanelHeader, Placeholder, Group, Input, View, Button, Div, List, Cell, Avatar, PanelHeaderBack, Spinner, Search, DropZone, Flex, FormItem, File, FormLayoutGroup,
   Select, CellButton, NativeSelect, DatePicker, ChipsInput, IconButton, ButtonGroup, RadioGroup, Radio
 } from '@vkontakte/vkui';
-import { Icon28MusicOutline, Icon28UsersOutline, Icon28UserOutline, Icon56CameraOutline, Icon24Camera, Icon24Document, Icon16Clear } from '@vkontakte/icons'
+import { Icon28CancelCircleOutline, Icon56UserAddBadgeOutline, Icon28PawOutline, Icon28HandHeartOutline } from '@vkontakte/icons'
 import PropTypes from 'prop-types';
-import TimoshaImg from '../assets/timosha.png';
-import LeftArrow from '../assets/left-arrow.png';
-import Chel from '../assets/chel.png';
-import Hrestik from '../assets/hrestik.png';
-import Lapa from '../assets/lapa.png';
+import TimoshaImg from '../assets/animals/timosha.png';
+import LeftArrow from '../assets/icons/left-arrow.png';
 
 
 
@@ -17,14 +14,14 @@ export const Lenta = () => {
 
   return (
     <Group>
-      <Div style={{ border: '1px solid #D9D9D9', width: '332px', height: '544px', padding: '0', margin: 'auto' }}>
+      <Div style={{ border: '1px solid #D9D9D9', width: '300px', height: '450px', padding: '0', margin: 'auto' }}>
         <Placeholder style={{ margin: '0', padding: '0' }}>
-          <img src={TimoshaImg} alt='Timosha the Cat' />
+          <img src={TimoshaImg} alt='Timosha the Cat' style={{ width: '300px', height: '300px' }} />
         </Placeholder>
-        <Div style={{ fontSize: '28px' }}>
+        <Div style={{ fontSize: '22px', fontWeight: 'bold' }}>
           Тимоша, 7 лет
         </Div>
-        <Div style={{ fontSize: '16px' }}>
+        <Div style={{ fontSize: '14px', marginTop: '0', paddingTop: '0' }}>
           Сладкий котик джентельменского возраста. Люблю смотреть в окно и кушать. Самый лучший мужчина на свете по мнению Форбс.
         </Div>
       </Div>
@@ -36,28 +33,33 @@ export const Lenta = () => {
           <img src={LeftArrow} alt='Left arrow' style={{ transform: 'rotate(180deg)' }} />
         </Div>
       </Div>
-      <Div style={{ textAlign: 'center' }}>
-        <Button>
-          <img src={Hrestik} alt='cross' />
-        </Button>
-        <Button style={{ marginLeft: '30px' }}>
-          <img src={Lapa} alt='paw' />
-        </Button>
-        <Button style={{ marginLeft: '30px' }}>
-          <img src={Chel} alt='people' />
-        </Button>
+      <Div style={{ display: 'flex', justifyContent: 'center', marginTop: '-20px', padding: '0' }}>
+        <Div style={{ display: 'flex', justifyContent: 'space-between', width: '285px' }}>
+          <a>
+            <Icon28CancelCircleOutline style={{ width: '50px', height: '50px' }} />
+          </a>
+          <a>
+            <Icon28PawOutline style={{ width: '50px', height: '50px' }} />
+          </a>
+          <a>
+            <Icon28HandHeartOutline style={{ width: '50px', height: '50px' }} />
+            {/* <Icon56UserAddBadgeOutline style={{ width: '50px', height: '50px' }} /> */}
+          </a>
+        </Div>
       </Div>
-      <FormLayoutGroup mode='horizontal' style={{ textAlign: 'center' }}>
-        <FormItem style={{ fontSize: '12px', color: 'gray' }}>
-          Пропустить
-        </FormItem>
-        <FormItem style={{ fontSize: '12px', color: 'gray' }}>
-          Лайк питомцу
-        </FormItem>
-        <FormItem style={{ fontSize: '12px', color: 'gray' }}>
-          Лайк человеку
-        </FormItem>
-      </FormLayoutGroup>
+      <Div style={{ display: 'flex', justifyContent: 'center', margin: '-20px 0 0 0', padding: '0' }}>
+        <Div style={{ display: 'flex', justifyContent: 'space-between', width: '320px', margin: '0', padding: '0' }}>
+          <Div style={{ fontSize: '10px', color: 'gray', marginRight: '10px' }}>
+            Пропустить
+          </Div>
+          <Div style={{ fontSize: '10px', color: 'gray' }}>
+            Лайк питомцу
+          </Div>
+          <Div style={{ fontSize: '10px', color: 'gray' }}>
+            Лайк человеку
+          </Div>
+        </Div>
+      </Div>
     </Group>
   );
 };
