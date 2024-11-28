@@ -10,6 +10,8 @@ import { PeopleQuestionary } from '../mainPanels/PeopleQuestionary';
 import { AnimalQuestionary } from '../mainPanels/AnimalQuestionary';
 import { TabBarForLapa } from '../props/TabbarForLapa';
 import { Likes } from '../mainPanels/Likes';
+import { Profile } from '../mainPanels/Profile';
+import { Filters } from '../mainPanels/Filters';
 
 
 export const Home = () => {
@@ -62,7 +64,7 @@ export const Home = () => {
 
       <Panel id='filters'>
         <PanelHeader>Фильтры</PanelHeader>
-
+        <Filters />
         <TabBarForLapa activePanel={activePanel} setActivePanel={setActivePanel} />
       </Panel>
 
@@ -74,7 +76,7 @@ export const Home = () => {
 
       <Panel id='profile'>
         <PanelHeader>Профиль</PanelHeader>
-
+        <Profile />
         <TabBarForLapa activePanel={activePanel} setActivePanel={setActivePanel} />
       </Panel>
 

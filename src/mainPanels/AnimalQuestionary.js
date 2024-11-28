@@ -28,22 +28,7 @@ export const AnimalQuestionary = () => {
                     <Input id="name" />
                 </FormItem>
                 <FormItem top="Возраст питомца">
-                    <Div>
-                        <Slider
-                            min={0}
-                            max={25}
-                            value={petAge}
-                            onChange={setPetAge}
-                            aria-labelledby="pet-age-slider"
-                        />
-                    </Div>
-                    <Input
-                        type="number"
-                        value={petAge}
-                        onChange={(e) => setPetAge(Number(e.target.value))}
-                        min={0}
-                        max={25}
-                    />
+                    <Input id="name" />
                 </FormItem>
                 <FormItem top="Выберите пол питомца" topId="setGender">
                     <RadioGroup mode="horizontal" aria-labelledby="gender">
